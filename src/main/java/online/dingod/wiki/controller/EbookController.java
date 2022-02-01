@@ -1,7 +1,9 @@
 package online.dingod.wiki.controller;
 
 import online.dingod.wiki.domain.Ebook;
+import online.dingod.wiki.req.EbookReq;
 import online.dingod.wiki.resp.CommonResp;
+import online.dingod.wiki.resp.EbookResp;
 import online.dingod.wiki.service.EbookService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,10 +21,10 @@ public class EbookController {
 
 
     @GetMapping("/list")
-    public CommonResp List() {
+    public CommonResp List(EbookReq req) {
 
-        CommonResp<Object> resp = new CommonResp<>();
-        List<Ebook> list = ebookService.list();
+        CommonResp<List<EbookResp>> resp = new CommonResp<>();
+        List<EbookResp> list = ebookService.list(req);
         resp.setContent(list);
         return resp;
     }
