@@ -1,5 +1,6 @@
 package online.dingod.wiki.service;
 
+import online.dingod.wiki.domain.Demo;
 import online.dingod.wiki.domain.Test;
 import online.dingod.wiki.mapper.DemoMapper;
 import online.dingod.wiki.mapper.TestMapper;
@@ -9,12 +10,12 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class TestService {
+public class DemoService {
 
     @Resource
-    private TestMapper testMapper;
+    private DemoMapper demoMapper;
 
-    public List<Test> list() {
-        return testMapper.list();
+    public List<Demo> list() {
+        return demoMapper.selectByExample(null);
     }
 }
