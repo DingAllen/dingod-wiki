@@ -1,1 +1,1 @@
-GET http://localhost:8080/ebook/list?name=vue
+GET http://localhost:8080/ebook/list?name=oracle
