@@ -1,1 +1,1 @@
-GET http://localhost:8080/ebook/list?name=oracle
+GET http://localhost:8888/ebook/list?name=oracle
