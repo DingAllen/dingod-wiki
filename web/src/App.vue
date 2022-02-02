@@ -4,9 +4,7 @@
     <a-layout-content style="padding: 0 50px">
       <router-view/>
     </a-layout-content>
-    <a-layout-footer style="text-align: center">
-      Dingod Wiki ©2022 Created by dkx
-    </a-layout-footer>
+    <the-footer />
   </a-layout>
 </template>
 
@@ -14,13 +12,15 @@
 import {UserOutlined, LaptopOutlined, NotificationOutlined} from '@ant-design/icons-vue';
 import {defineComponent, ref} from 'vue';
 import TheHeader from '@/components/the-header.vue'
+import TheFooter from '@/components/the-footer.vue'
 
 export default defineComponent({
   components: {
     UserOutlined,
     LaptopOutlined,
     NotificationOutlined,
-    TheHeader
+    TheHeader,
+    TheFooter
   },
   setup() {
     return {
