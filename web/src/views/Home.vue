@@ -133,7 +133,7 @@ export default defineComponent({
 
     onMounted(() => {
       console.log("onMounted");
-      axios.get('http://localhost:8888/ebook/list').then((res) => {
+      axios.get('/ebook/list').then((res) => {
         const data = res.data;
         ebooks.value = data.content;
         ebooks1.books = data.content;
