@@ -53,8 +53,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import axios from "axios";
 
 export default defineComponent({
-  name: 'Home'
+  name: 'Home',
+  setup() {
+    console.log('set up');
+    axios.get('http://localhost:8888/ebook/list?name=oracle').then((res) => {
+      console.log(res);
+    });
+  }
 });
 </script>
